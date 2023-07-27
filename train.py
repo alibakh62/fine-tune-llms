@@ -15,7 +15,7 @@ def train():
     model = AutoModelForCausalLM.from_pretrained(
         "Salesforce/xgen-7b-8k-base",
         load_in_4bit=True,
-        torch_dtype=torch.float16,
+        # torch_dtype=torch.float16,
         device_map="auto",
     )
     model.resize_token_embeddings(len(tokenizer))
